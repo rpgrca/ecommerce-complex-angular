@@ -1,0 +1,99 @@
+body {
+    padding: 20px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    max-width: 100%;
+    background: #65a0c0;
+    height: 100%;
+}
+
+footer, .footer {
+    clear: both;
+    font-size: small;
+    height: 24px;
+    padding: 5px;
+}
+
+header {
+    width: 100%;
+    background: #3680a7;
+    display: block;
+    height: 24px;
+    text-align: right;
+    padding: 5px;
+}
+
+a:link {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a.blue-link {
+    color: #3680a7;
+    font-size: small;
+}
+
+label {
+    width: 180px;
+    clear: left;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+/**
+ * TODO: Cambiar a clase
+ */
+input, label, select, textarea {
+    float: left;
+    font-size: 16px;
+}
+
+.miembroFormulario {
+    float: left;
+    font-size: 16px;
+}
+
+.formulario {
+    background: #bacaca;
+    border: 1px solid #aaa;
+    display: table;
+    width: auto;
+    padding: 10px;
+}
+
+.img-thumbnail {
+    width: 300px;
+    height: 300px;
+}
+
+.span-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.span-description {
+    font-size: small;
+}
+
+.span-strike {
+    text-decoration: line-through;
+}
+
+.div-list {
+    font-size: 18px;
+}
+
+.div-item {
+    display: inline-block;
+    float: left;
+    min-width: 300px;
+    max-width: 20%;
+    height: 750px;
+    padding: 10px;
+    background: white;
+    margin: 10px;
+}

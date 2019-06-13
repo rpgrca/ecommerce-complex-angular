@@ -1,0 +1,17 @@
+  <div *ngIf="producto; else noProduct">
+    <h2><a [routerLink]="['/']"><img alt="Flecha atras" width="32" height="32" src="http://localhost:5000/images/back-arrow.png" />Volver atrás</a></h2>
+    <div id="{{producto.codigo}}" class="div-item">
+        <img alt="{{producto.codigo}}" class="img-thumbnail" src="{{'http://localhost:5000' + producto.imagen}}">
+        <p><span class="span-title">Marca:</span> {{producto.marca}}</p>
+        <p><span class="span-title">Nombre:</span> {{producto.nombre}}</p>
+        <p><span class="span-title">Descripci&oacute;n:</span> <span class="span-description">{{producto.descripcion}}</span></p>
+        <p><span class="span-title">Precio de lista:</span> <span class="span-strike">${{producto.precioLista}}</span></p>
+        <p><span class="span-title">Precio con descuento:</span> ${{producto.precioFinal}}</p>
+        <p><span class="span-title">C&oacute;digo:</span> {{producto.codigo}}</p>
+        <p><span class="span-title">Categor&iacute;as:</span> {{producto.categorias}}</p>
+    </div>
+  </div>
+  <ng-template noProduct>
+    <h2><a [routerLink]="['/']"><img alt="Flecha atras" width="32" height="32" src="http://localhost:5000/images/back-arrow.png" />Volver atrás</a></h2>
+    <div>No hay información sobre el producto indicado.</div>
+  </ng-template>

@@ -1,0 +1,31 @@
+<header class="header">
+    <span *ngIf="page !== '_index'; else simpleIndex">
+      <a [routerLink]="['/']">P&aacute;gina principal</a>&nbsp;|&nbsp;
+    </span>
+    <ng-template #simpleIndex>
+      <span>P&aacute;gina principal&nbsp;|&nbsp;</span>
+    </ng-template>
+
+    <span *ngIf="name === null; else loggedIn">
+      <span *ngIf="page !== 'login'; else simpleLogin">
+        <a [routerLink]="['/login']">Acceder</a>&nbsp;|&nbsp;
+      </span>
+      <ng-template #simpleLogin>
+        <span>Acceder&nbsp;|&nbsp;</span>
+      </ng-template>
+
+      <span *ngIf="page !== 'register'; else simpleLogin">
+        <a [routerLink]="['/register']">Registrarse</a>
+      </span>
+      <ng-template #simpleLogin>
+        <span>Registrarse</span>
+      </ng-template>
+    </span>
+    <ng-template #loggedIn>
+      <span>Hola {{name}}&nbsp;|&nbsp;</span>
+      <span>
+        <a [routerLink]="['/logout']">Salir</a>
+      </span>
+    </ng-template>
+</header>
+<h1>{{title}}</h1>

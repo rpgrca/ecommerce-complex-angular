@@ -1,0 +1,25 @@
+<div class="login">
+<form class="formulario" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div>
+        <label class="miembroFormulario" for="">E-mail</label>
+        <input type="text" formControlName="email">
+        <div *ngIf="loginForm.get('email').errors && loginForm.get('email').dirty">
+            <p *ngIf="loginForm.get('email').hasError('required')">El campo es obligatorio</p>
+            <p *ngIf="loginForm.get('email').hasError('minlength')">Debe completar al menos 2 caracteres</p>
+        </div>
+    </div>
+    <div>
+      <label class="miembroFormulario" for="">Password</label>
+      <input type="password" formControlName="clave">
+      <div *ngIf="loginForm.get('clave').errors && loginForm.get('clave').dirty">
+        <p *ngIf="loginForm.get('clave').hasError('required')">El campo es obligatorio</p>
+        <p *ngIf="loginForm.get('clave').hasError('minlength')">Debe completar al menos 4 caracteres</p>
+        <p *ngIf="loginForm.get('clave').hasError('maxlength')">Debe completar como maximo 8 caracteres</p>
+      </div>
+      <div>
+        <input [disabled]="loginForm.invalid" type="submit" value="Login">
+      </div>
+  </div>
+</form>
+</div>
+<div [hidden]="!message" class="error-message">{{message}}</div>

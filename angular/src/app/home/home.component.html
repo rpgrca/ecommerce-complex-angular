@@ -1,0 +1,20 @@
+<div *ngIf="productos && productos.length > 0; else noProducts">
+  <h2>Productos disponibles</h2>
+  <div class="producto" *ngFor="let producto of productos">
+    <div id="{{producto.codigo}}" class="div-item">
+        <a [routerLink]="['/details', producto.codigo]">
+         <img class="img-thumbnail" src="{{'http://localhost:5000' + producto.imagen}}">
+        </a>
+        <p><span class="span-title">Marca:</span> {{producto.marca}}</p>
+        <p><span class="span-title">Nombre:</span> {{producto.nombre}}</p>
+        <p><span class="span-title">Descripci&oacute;n:</span> <span class="span-description">{{producto.descripcion}}</span></p>
+        <p><span class="span-title">Precio de lista:</span> <span class="span-strike">${{producto.precioLista}}</span></p>
+        <p><span class="span-title">Precio con descuento:</span> ${{producto.precioFinal}}</p>
+        <p><span class="span-title">C&oacute;digo:</span> {{producto.codigo}}</p>
+        <p><span class="span-title">Categor&iacute;as:</span> {{producto.categorias}}</p>
+    </div>
+  </div>
+</div>
+<ng-template #noProducts>
+  <h2>No hay productos disponibles en este momento</h2>
+</ng-template>

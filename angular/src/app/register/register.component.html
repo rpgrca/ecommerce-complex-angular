@@ -1,0 +1,42 @@
+<div *ngIf="registerForm">
+<p>Para poder comprar en este sitio deber&aacute; registrarse completando el siguiente formulario. Si ya tiene una cuenta, puede <a [routerLink]="['/login']">acceder</a> a la misma.</p>
+<div class="login">
+    <form class="formulario" [formGroup]="registerForm" (ngSubmit)="register()">
+        <label id="nombreLabel">Nombre (*)</label><input type="text" formControlName="nombre" /><br />
+        <div *ngIf="registerForm.get('nombre').errors && registerForm.get('nombre').dirty">
+            <p *ngIf="registerForm.get('nombre').hasError('required')">El campo es obligatorio</p>
+        </div>
+
+        <label id="apellidoLabel" for="apellido">Apellido (*)</label><input type="text" id="apellido" formControlName="apellido" /><br />
+        <div *ngIf="registerForm.get('apellido').errors && registerForm.get('apellido').dirty">
+            <p *ngIf="registerForm.get('apellido').hasError('required')">El campo es obligatorio</p>
+        </div>
+
+        <label id="dniLabel" for="dni">DNI</label><input type="text" id="dni" formControlName="dni" /><br />
+        <label id="emailLabel" for="email">E-mail (*)</label><input type="text" id="email" formControlName="email" /><br />
+        <div *ngIf="registerForm.get('email').errors && registerForm.get('email').dirty">
+          <p *ngIf="registerForm.get('email').hasError('required')">El campo es obligatorio</p>
+          <p *ngIf="registerForm.get('email').hasError('minlength')">Debe completar al menos 2 caracteres</p>
+        </div>
+
+        <label id="telefonoLabel" for="telefono">Tel&eacute;fono</label><input type="tel" id="telefono" formControlName="telefono" /><br />
+        <label id="claveLabel" for="clave">Clave (*)</label><input type="password" id="clave" formControlName="clave" /><br />
+        <div *ngIf="registerForm.get('clave').errors && registerForm.get('clave').dirty">
+          <p *ngIf="registerForm.get('clave').hasError('required')">El campo es obligatorio</p>
+          <p *ngIf="registerForm.get('clave').hasError('minlength')">Debe completar al menos 4 caracteres</p>
+          <p *ngIf="registerForm.get('clave').hasError('maxlength')">Debe completar como maximo 8 caracteres</p>
+        </div>
+        <label id="confirmarClaveLabel" for="confirmarClave">Confirmar clave (*)</label><input type="password" id="confirmarClave" formControlName="confirmarClave" /><br />
+        <div *ngIf="registerForm.get('confirmarClave').errors && registerForm.get('confirmarClave').dirty">
+          <p *ngIf="registerForm.get('confirmarClave').hasError('required')">El campo es obligatorio</p>
+          <p *ngIf="registerForm.get('confirmarClave').hasError('minlength')">Debe completar al menos 4 caracteres</p>
+          <p *ngIf="registerForm.get('confirmarClave').hasError('maxlength')">Debe completar como maximo 8 caracteres</p>
+        </div>
+
+        <label for="reset">&nbsp;</label>
+        <input type="reset" id="reset" value="Limpiar" />
+        <input type="submit" id="submit" value="Registrar">
+    </form>
+</div>
+<div [hidden]="!message" class="error-message">{{message}}</div>
+</div>

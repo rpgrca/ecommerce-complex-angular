@@ -1,0 +1,36 @@
+.blue-link {
+    color: #3680a7;
+    font-size: small;
+}
+
+.span-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.span-description {
+    font-size: small;
+}
+
+.span-strike {
+    text-decoration: line-through;
+}
+
+.div-item {
+    float: left;
+    min-width: 300px;
+    max-width: 20%;
+    height: 800px;
+    padding: 10px;
+    background: white;
+    margin: 10px;
+}
+
+.button-add {
+    width: 100%;
+}
+
+.img-thumbnail {
+    width: 300px;
+    height: 300px;
+}
