@@ -4,14 +4,16 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "saturday"
 
   - package-ecosystem: "npm"
     directory: "/angular"
     schedule:
       interval: "weekly"
+      day: "saturday"
 
   - package-ecosystem: "npm"
     directory: "/node"
     schedule:
       interval: "weekly"
-
+      day: "saturday"
