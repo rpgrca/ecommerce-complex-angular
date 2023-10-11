@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~16.2.7",
+    "@angular/animations": "~16.2.8",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~11.0.5",
@@ -28,7 +28,7 @@
     "@angular-devkit/build-angular": "~15.2.0",
     "@angular/cli": "~16.2.4",
     "@angular/compiler-cli": "~15.2.1",
-    "@angular/language-service": "~16.2.7",
+    "@angular/language-service": "~16.2.8",
     "@types/jasmine": "~5.1.0",
     "@types/jasminewd2": "~2.0.11",
     "codelyzer": "~6.0.2",
