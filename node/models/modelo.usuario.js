@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var bcrypt = require('bcrypt');
+//var bcrypt = require('bcryptjs');
 
 /**
  * Modelo del usuario en base de datos. El usuario es el e-mail.
