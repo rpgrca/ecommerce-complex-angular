@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~18.2.0",
+    "@angular/animations": "~18.2.5",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~11.0.5",
@@ -21,14 +21,14 @@
     "@angular/router": "~7.2.0",
     "core-js": "^3.38.0",
     "rxjs": "~6.6.7",
-    "tslib": "^2.6.3",
+    "tslib": "^2.7.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~15.2.0",
-    "@angular/cli": "~18.2.0",
+    "@angular/cli": "~18.2.5",
     "@angular/compiler-cli": "~15.2.1",
-    "@angular/language-service": "~18.1.4",
+    "@angular/language-service": "~18.2.5",
     "@types/jasmine": "~5.1.4",
     "@types/jasminewd2": "~2.0.13",
     "codelyzer": "~6.0.2",
