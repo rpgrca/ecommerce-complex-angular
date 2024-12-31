@@ -10,7 +10,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es5",
+    "target": "es2022",
+    "useDefineForClassFields": false,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -18,5 +19,8 @@
       "es2018",
       "dom"
     ]
-  }
+  },
+   "angularCompilerOptions": {
+      "strictTemplates": true
+    }
 }
