@@ -25,8 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -58,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ej3:build"
+            "buildTarget": "ej3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ej3:build:production"
+              "buildTarget": "ej3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ej3:build"
+            "buildTarget": "ej3:build"
           }
         },
         "test": {
@@ -131,6 +130,5 @@
         }
       }
     }
-  },
-  "defaultProject": "ej3"
+  }
 }
