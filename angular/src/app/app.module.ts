@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,19 +19,19 @@ import { LogoutComponent } from './logout/logout.component';
   declarations: [
   ],
   imports: [
-    AppComponent,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule,
     LoginComponent,
     HomeComponent,
     RegisterComponent,
     DetailsComponent,
     HeaderComponent,
     FooterComponent,
-    LogoutComponent,
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    LogoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

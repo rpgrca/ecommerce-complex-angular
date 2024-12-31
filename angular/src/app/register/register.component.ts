@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
+import { FormGroup, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuariosService } from 'src/app/usuarios.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  imports: [ CommonModule, RouterLink, ReactiveFormsModule ]
 })
 export class RegisterComponent implements OnInit {
-  public registerForm = this.fb.group({
+  public registerForm: FormGroup = this.fb.group({
     email:["", [Validators.required, Validators.minLength(2)]],
     clave:["", [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
     confirmarClave:["", [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],

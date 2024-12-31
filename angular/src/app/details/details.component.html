@@ -11,7 +11,7 @@
         <p><span class="span-title">Categor&iacute;as:</span> {{producto.categorias}}</p>
     </div>
   </div>
-  <ng-template noProduct>
+  <ng-template #noProduct>
     <h2><a [routerLink]="['/']"><img alt="Flecha atras" width="32" height="32" src="http://localhost:5000/images/back-arrow.png" />Volver atrás</a></h2>
     <div>No hay información sobre el producto indicado.</div>
   </ng-template>
